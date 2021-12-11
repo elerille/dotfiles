@@ -1,0 +1,35 @@
+# Default config for sway
+#
+# Copy this to ~/.config/sway/config and edit it to your liking.
+#
+# Read `man 5 sway` for a complete reference.
+
+#xwayland enable
+#xwayland disable
+
+### Variables
+#
+# Logo key. Use Mod1 for Alt.
+set $mod Mod4
+# Home row direction keys, like vim
+set $left h
+set $down j
+set $up k
+set $right l
+# Your preferred terminal emulator
+set $term kitty
+set $term_without_tmux kitty -c ~/.config/kitty/kitty-without-tmux.conf
+#set $term foot
+# Your preferred application launcher
+# Note: pass the final command to swaymsg so that the resulting window can be opened
+# on the original workspace that the command was run on.
+#set $menu dmenu_path | dmenu | xargs swaymsg exec --
+set $menu wofi --show drun --define drun-print_command=true | sed s/%[a-zA-Z]// | _JAVA_AWT_WM_NONREPARENTING=1 xargs swaymsg exec --
+set $bar waybar
+set $wlogout wlogout
+set $thinkmenu wlogout -l ~/.config/wlogout/layout-think
+
+include /etc/sway/config-vars.d/*
+include ~/.config/sway-vars.d/*
+
+

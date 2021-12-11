@@ -1,0 +1,8 @@
+include config.head
+
+# Use Alt
+set $mod Mod1
+set $bar waybar-alt
+
+include config.main
+

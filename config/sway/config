@@ -1,0 +1,9 @@
+include config.head
+
+include config.main
+
+assign [class="Xournal"] workspace X
+assign [app_id="Xournal"] workspace X
+workspace X output DVI-I-1
+
+include /etc/sway/config.d/*
