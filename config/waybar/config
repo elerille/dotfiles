@@ -7,9 +7,9 @@
     "height": 25, // Waybar height (to be removed for auto height)
     //"width": 1280, // Waybar width
     // Choose the order of the modules
-    "modules-left": ["sway/workspaces", "sway/mode", "custom/media", "sway/window"],
+    "modules-left": ["sway/workspaces", "sway/mode", "custom/media"],
     "modules-center": ["wlr/taskbar"],
-    // masked : "idle_inhibitor",
+    // masked : "idle_inhibitor", "sway/window",
     "modules-right": ["pulseaudio", "network", "cpu", "memory", "backlight", "keyboard-state", "temperature", "sway/language", "battery", "clock", "tray"],
     // "margin": "10",
     // "margin-top": "10",
@@ -27,7 +27,7 @@
     //"ipc": true, // >> v0.9.8
     // Modules configuration
     "wlr/taskbar": {
-      "format": "{icon} {title:.15}",
+      "format": "{icon} {title:.20}",
       "markup": true,
       "tooltip-format": "[{app_id}] {title}",
       "on-click": "activate",
@@ -37,19 +37,19 @@
       //"active-first": true,
     },
     "sway/workspaces": {
-        //"disable-scroll": true,
-        //"all-outputs": true,
-        //"format": "{name}: {icon}",
-        "format-icons": {
-            // "1": "",
-            // "2": "",
-            // "3": "",
-            // "4": "",
-            // "5": "",
-            // "urgent": "",
-            // "focused": "",
-            // "default": ""
-        }
+      //"disable-scroll": true,
+      //"all-outputs": true,
+      //"format": "{name}: {icon}",
+      "format-icons": {
+        // "1": "",
+        // "2": "",
+        // "3": "",
+        // "4": "",
+        // "5": "",
+        // "urgent": "",
+        // "focused": "",
+        // "default": ""
+      }
     },
     "keyboard-state": {
       "numlock": true,
